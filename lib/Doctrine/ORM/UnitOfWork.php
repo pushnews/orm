@@ -2662,7 +2662,7 @@ class UnitOfWork implements PropertyChangedListener
                         $class->reflFields[$field]->setValue($entity, null);
                         $this->originalEntityData[$oid][$field] = null;
 
-                        continue;
+                        break;
                     }
 
                     if ( ! isset($hints['fetchMode'][$class->name][$field])) {
